@@ -42,6 +42,19 @@ pet dies I would like the option to try again.
 
 ![Wireframe](./wireframes/sleep.png)
 
+# HOW TO PLAY?
+
+Instructions
+Now that you have your pet, you must do everything in your power to keep them alive!
+- FEED YOUR PET
+Keep your pet well fed or they could die from hunger
+- ENTERTAIN YOUR PET
+We like to be entertained and so does your pet! 
+Keep them happy or they’ll die of boredom.
+- REST YOUR PET
+We all need sleep to  survive the day. 
+Ensure your pet is well rested or it will faint from exhaustion.
+
 # Day 1:
 
 
