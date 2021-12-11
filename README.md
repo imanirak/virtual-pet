@@ -46,12 +46,12 @@ pet dies I would like the option to try again.
 
 Instructions
 Now that you have your pet, you must do everything in your power to keep them alive!
-- FEED YOUR PET
+- FEED YOUR PET:
 Keep your pet well fed or they could die from hunger
-- ENTERTAIN YOUR PET
+- ENTERTAIN YOUR PET:
 We like to be entertained and so does your pet! 
 Keep them happy or they’ll die of boredom.
-- REST YOUR PET
+- REST YOUR PET:
 We all need sleep to  survive the day. 
 Ensure your pet is well rested or it will faint from exhaustion.
 
