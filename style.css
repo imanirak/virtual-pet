@@ -11,15 +11,30 @@ body {
 }
 
 .bubble {
+    background-image: url("images/scene.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     background-color: white;
     border-radius: 25px;
+    border-style: solid;
     width: 600px;
     height: 500px;
     margin: 0 auto;
 }
 
 h1 {
+    padding-top: 10px;
     text-align: center;
+}
+
+h2 {
+    text-align: center;
+    padding: 5px;
+    padding-bottom: 0;
+    margin: 0 auto;
+    font-size: 20px;
+    color: white;
 }
 
 #care {
@@ -27,6 +42,7 @@ h1 {
     justify-content: center;
     align-items: center;
     margin: 0 auto;
+    background-color: black;
 }
 
 progress {
@@ -39,21 +55,125 @@ progress {
     display: block;
     width: 126px;
     height: 180px;
-    background-color: beige;
-    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
 }
+
+
+/* egg animation */
+
+.egg_hatching {
+    animation: hatching;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    transform-origin: 50% 80% 0px;
+    /*transition: all 200ms;*/
+    animation-timing-function: linear;
+}
+
+@keyframes hatching {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(-20deg);
+    }
+    75% {
+        transform: rotate(20deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.jumppp {
+    transform: translateY(50%);
+}
+
+.egg_container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-top: 150px;
+    align-items: center;
+    flex-flow: column;
+}
+
+.egg_shape {
+    position: relative;
+    z-index: -1;
+    width: 150px;
+    height: 20px;
+    background: #00000017;
+    margin-top: -10px;
+    border-radius: 250px / 50px;
+    transition: all 200ms;
+    animation-timing-function: linear;
+}
+
+.egg_jump {
+    animation: jump;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    transform-origin: 50% 80% 0px;
+}
+
+@keyframes jump {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-200px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+
+/* egg animation end */
 
 #how {
     margin-left: 40px;
 }
 
+#age {
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    border-radius: 50px;
+    width: 100px;
+    color: white;
+}
+
+#age p {
+    background-color: black;
+    border-radius: 10px;
+    padding: 10px;
+}
+
 .buttons {
     display: flex;
     justify-content: center;
-    padding: 50px;
+    padding: 0px;
+    margin: 0 auto;
 }
 
 button {
     margin: 5px;
-    padding: 5px;
+    padding: 10px;
+    background-color: white;
+    border-radius: 10px;
+    text-transform: uppercase;
+    color: black;
+    background: transparent;
+    opacity: 0.9;
+}
+
+button:hover {
+    background-color: rgba(128, 128, 128, .5);
+    color: white;
+}
+
+#instructions {
+    position: relative;
+    align-items: left;
 }

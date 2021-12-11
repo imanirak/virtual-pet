@@ -24,32 +24,58 @@
 
 
             <div id="care">
-
-                <label for="health">Health</label>
-
-                <progress id="health" value="5" max="10"> </progress>
-
-
-                <label for="hunger">Hunger</label>
-                <progress id="hunger" value="5" max="10"></progress>
+                <div class="hunger">
+                    <h2>Hunger</h2>
+                    <progress id="hunger" value="5" max="10"> </progress>
+                </div>
 
 
-                <label for="Rest">Rest</label>
-                <progress id="rest" value="5" max="10"></progress>
+                <div class="fatigue">
+                    <h2>Fatigue</h2>
+                    <progress id="fatigue" value="5" max="10"></progress>
+                </div>
+
+
+                <div class="boredom">
+
+                    <h2>Boredom</h2>
+                    <progress id="boredom" value="5" max="10"></progress>
+                </div>
+
 
             </div>
 
 
 
-            <div id="egg"></div>
+            <!--  <div id="egg"></div>  -->
+
+            <div id="egg">
+                <img src="https://i.imgur.com/CKPQGaO.png" width="130px" class="egg_hatching">
+                <div class="egg_shape"></div>
+
+            </div>
+
+            <div id="age">
+                <p>
+                    Age: <span>0</span>
+                </p>
+            </div>
+
             <div class="buttons">
+
+                <div id="instructions">
+                    <button class="how">HOW TO PLAY?</button>
+                </div>
+
+
                 <button id="feed">FEED</button>
                 <button id="play">PLAY</button>
                 <button id="sleep">SLEEP</button>
+
+
             </div>
 
 
-            <button id="how">HOW TO PLAY?</button>
         </div>
 
 
