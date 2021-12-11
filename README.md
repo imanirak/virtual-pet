@@ -41,3 +41,7 @@ pet dies I would like the option to try again.
 
 
 ![Wireframe](./wireframes/sleep.png)
+
+# Day 1:
+
+I started off by getting 
