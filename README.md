@@ -44,4 +44,4 @@ pet dies I would like the option to try again.
 
 # Day 1:
 
-I started off by getting 
+
