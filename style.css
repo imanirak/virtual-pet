@@ -1,0 +1,59 @@
+body {
+    background-color: burlywood;
+}
+
+.contain {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.bubble {
+    background-color: white;
+    border-radius: 25px;
+    width: 600px;
+    height: 500px;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+}
+
+#care {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+progress {
+    margin: 5px;
+}
+
+#egg {
+    margin: 0 auto;
+    margin-top: 20px;
+    display: block;
+    width: 126px;
+    height: 180px;
+    background-color: beige;
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+}
+
+#how {
+    margin-left: 40px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+}
+
+button {
+    margin: 5px;
+    padding: 5px;
+}
