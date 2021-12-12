@@ -13,6 +13,8 @@ have the option to close out this pop up.
 
 //const { default: swal } = require("sweetalert");
 
+//const { default: swal } = require("sweetalert");
+
 
 
 
@@ -33,7 +35,28 @@ class virtualPet {
     }
 
     /* raise food progress bar by 2 */
+    howTo() {
+        console.log("HOW TO PLAY?");
+        const rules = document.getElementById("rules").value;
 
+
+
+        swal({
+            title: "HOW TO PLAY:",
+            text: `FEED YOUR PET:
+            Keep your pet well fed or they could die
+            from hunger.
+            PLAY WITH YOUR PET:
+            We like to be entertained ando does your pet!
+            REST YOUR PET:
+            We all need sleep to survive the day. 
+            Ensue your pet is well rested or it will faint from exhaustion.`
+
+
+        })
+
+
+    }
 
     feed() {
         this.hunger = this.hunger + 1;
@@ -89,7 +112,7 @@ class virtualPet {
             document.getElementById("happiness").value = "10";
             swal({
                 title: `${nameInput.value} says`,
-                text: "I dont want to play right now.",
+                text: "I need a break right now!",
                 icon: "info",
                 button: "OK",
             })
@@ -102,11 +125,7 @@ class virtualPet {
 
 }
 
-const howToPlay = () => {
-    console.log("HOW TO PLAY?");
 
-
-}
 
 /* create a new pet from virtualPet class */
 
@@ -141,36 +160,13 @@ playButton.addEventListener("click", () => {
     vpet.play();
 });
 
+const howToPlayBtn = document.getElementById("howTo");
+
+howToPlayBtn.addEventListener("click", () => {
+    vpet.howTo();
 
 
-/* make button pop up with instructions */
-
-
-// Get the modal
-var modal = document.getElementById("myModal");
-
-// Get the button that opens the modal
-var btn = document.getElementById("myBtn");
-
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
-
-// When the user clicks the button, open the modal 
-btn.onclick = function() {
-    modal.style.display = "block";
-}
-
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-    modal.style.display = "none";
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-}
+})
 
 
 
@@ -193,3 +189,23 @@ enter.addEventListener('click', () => {
     enterBtn.parentNode.removeChild(enterBtn);
 
 });
+
+
+
+
+
+
+
+
+
+
+
+//timer
+
+document.getElementById("nameButton").addEventListener("click", function() {
+    var time = 0;
+
+    const vTimer = setInterval(function function1() {
+        document.getElementById("")
+    })
+})
