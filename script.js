@@ -188,14 +188,18 @@ enter.addEventListener('click', () => {
     inputBox.parentNode.removeChild(inputBox);
     enterBtn.parentNode.removeChild(enterBtn);
 
+
+    // when pet is named egg hatches 
+
+    //change img
+    document.getElementById("petImg").src = "./images/baby1.png";
+
+    //size img correctly
+    document.getElementById("petImg").style.width = "200px";
+
+
+
 });
-
-
-
-
-
-
-
 
 
 
@@ -209,3 +213,18 @@ document.getElementById("nameButton").addEventListener("click", function() {
         document.getElementById("")
     })
 })
+
+
+
+//die if
+const hungerV = document.getElementById("hunger").value;
+
+const sleepV = document.getElementById("sleepiness").value;
+
+const happyV = document.getElementById("happiness").value;
+
+if (hungerV || sleepV || happyV === "0") {
+    this.alive = false;
+} else {
+    this.alive = true;
+}
