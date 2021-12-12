@@ -187,5 +187,9 @@ let vName = document.getElementById("vname");
 
 enter.addEventListener('click', () => {
     vName.innerText = nameInput.value;
+    const inputBox = document.getElementById("nameinput");
+    const enterBtn = document.getElementById("nameButton");
+    inputBox.parentNode.removeChild(inputBox);
+    enterBtn.parentNode.removeChild(enterBtn);
 
 });
