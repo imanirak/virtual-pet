@@ -11,7 +11,10 @@ have the option to close out this pop up.
 
 */
 
-/* the pet */
+//const { default: swal } = require("sweetalert");
+
+
+
 
 /* time to reference growth for vpet */
 
@@ -34,14 +37,14 @@ class virtualPet {
 
     feed() {
         this.hunger = this.hunger + 1;
-        console.log(`Feeding my pet ${vpet.name}`);
+        console.log(`Feeding my pet ${vpet.hunger}`);
         console.log(this.hunger);
         let hungerP = document.getElementById("hunger").value = this.hunger;
 
         if (hungerP > 10) {
             document.getElementById("hunger").value = "10";
             swal({
-                title: `${vpet.name} says`,
+                title: `${nameInput.value} says`,
                 text: " I 'm Full!",
                 icon: "info",
                 button: "OK",
@@ -54,15 +57,17 @@ class virtualPet {
 
     sleep() {
         this.sleepiness = this.sleepiness + 1;
-        console.log(`Feeding my pet ${ vpet.sleepiness }`);
+        console.log(`${nameInput.value} rest level is ${ vpet.sleepiness }`);
         console.log(this.sleepiness);
         let sleep = document.getElementById("sleepiness").value = this.sleepiness;
 
+        /*turns off light */
 
+        // document.getElementById("dark").setAttribute('background-color:', "black");
         if (sleep > 10) {
             document.getElementById("sleepiness").value = "10";
             swal({
-                title: `${vpet.name} says`,
+                title: `${nameInput.value} says`,
                 text: "I'm not tired anymore.",
                 icon: "success",
                 button: "OK",
@@ -76,22 +81,20 @@ class virtualPet {
 
     play() {
         this.happiness = this.happiness + 1;
-        console.log(`
-                        Feeding my pet $ { vpet.happiness }
-                        `);
+        console.log(`${nameInput.value} happiness level is ${ vpet.happiness} `);
         console.log(this.happiness);
         let happy = document.getElementById("happiness").value = this.happiness;
 
-        if (happy > 10) {
+        if (happy >= 10) {
             document.getElementById("happiness").value = "10";
             swal({
-                title: `${vpet.name} says`,
+                title: `${nameInput.value} says`,
                 text: "I dont want to play right now.",
                 icon: "info",
                 button: "OK",
             })
         } else {
-            console.log("ugh... leave me alone")
+            console.log("I still want to play!")
         }
 
     }
@@ -116,7 +119,7 @@ const feedButton = document.getElementById("feed");
 
 feedButton.addEventListener("click", () => {
 
-    vpet.feed()
+    vpet.feed();
 });
 
 
@@ -125,7 +128,7 @@ const sleepButton = document.getElementById("sleep");
 
 sleepButton.addEventListener("click", () => {
 
-    vpet.sleep()
+    vpet.sleep();
 });
 
 
@@ -135,14 +138,8 @@ const playButton = document.getElementById("play");
 
 playButton.addEventListener("click", () => {
 
-    vpet.play()
+    vpet.play();
 });
-
-
-
-
-
-
 
 
 
@@ -174,3 +171,21 @@ window.onclick = function(event) {
         modal.style.display = "none";
     }
 }
+
+
+
+//naming pet
+
+
+
+let nameInput = document.getElementById("nameinput");
+
+let enter = document.getElementById("nameButton");
+
+let vName = document.getElementById("vname");
+
+
+enter.addEventListener('click', () => {
+    vName.innerText = nameInput.value;
+
+});
