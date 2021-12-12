@@ -40,7 +40,12 @@ class virtualPet {
 
         if (hungerP > 10) {
             document.getElementById("hunger").value = "10";
-            alert("IM FULL!")
+            swal({
+                title: `${vpet.name} says`,
+                text: " I 'm Full!",
+                icon: "info",
+                button: "OK",
+            })
         } else {
             console.log("More FOOD!")
         }
@@ -49,13 +54,19 @@ class virtualPet {
 
     sleep() {
         this.sleepiness = this.sleepiness + 1;
-        console.log(`Feeding my pet ${vpet.sleepiness}`);
+        console.log(`Feeding my pet ${ vpet.sleepiness }`);
         console.log(this.sleepiness);
         let sleep = document.getElementById("sleepiness").value = this.sleepiness;
 
+
         if (sleep > 10) {
             document.getElementById("sleepiness").value = "10";
-            alert("IM NOT TIRED!")
+            swal({
+                title: `${vpet.name} says`,
+                text: "I'm not tired anymore.",
+                icon: "success",
+                button: "OK",
+            })
         } else {
             console.log("I want to sleep")
         }
@@ -65,13 +76,20 @@ class virtualPet {
 
     play() {
         this.happiness = this.happiness + 1;
-        console.log(`Feeding my pet ${vpet.happiness}`);
+        console.log(`
+                        Feeding my pet $ { vpet.happiness }
+                        `);
         console.log(this.happiness);
         let happy = document.getElementById("happiness").value = this.happiness;
 
         if (happy > 10) {
             document.getElementById("happiness").value = "10";
-            alert("Im Happy!")
+            swal({
+                title: `${vpet.name} says`,
+                text: "I dont want to play right now.",
+                icon: "info",
+                button: "OK",
+            })
         } else {
             console.log("ugh... leave me alone")
         }
@@ -79,9 +97,10 @@ class virtualPet {
     }
 
 
+}
 
-
-
+const howToPlay = () => {
+    console.log("HOW TO PLAY?");
 
 
 }
@@ -118,3 +137,40 @@ playButton.addEventListener("click", () => {
 
     vpet.play()
 });
+
+
+
+
+
+
+
+
+
+/* make button pop up with instructions */
+
+
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+    modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
