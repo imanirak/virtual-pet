@@ -16,7 +16,7 @@
 
 <body>
     <div id="contain">
-        <div class="bubble">
+        <div id="bg" class="bubble">
             <h1>Take Care of Your Own Virtual Pet!</h1>
 
 
@@ -44,6 +44,10 @@
             <div id="pet-name">
                 <header id='name-area'>
                     <p id="vname">What's my name?</p>
+                    <div class="clock">
+                        <span class="clock-time"></span>
+                        <span class="clock-ampm"></span>
+                    </div>
                     <input type="text" id='nameinput' placeholder="name me!">
                     <button type="button" id="nameButton">ENTER</button>
 
@@ -66,6 +70,8 @@
                 </p>
             </div>
 
+
+
             <div class="buttons ">
 
                 <!-- Trigger/Open The Modal -->
@@ -79,7 +85,7 @@
                         <span class="close ">&times;</span>
                         <p>
 
-                            <ul id="rules ">
+                            <ul id="rules">
                                 <h1>HOW TO PLAY?</h1>
                                 <li>FEED YOUR PET</li>
                                 <p>

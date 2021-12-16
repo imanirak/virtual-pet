@@ -1,5 +1,6 @@
 body {
     background-color: burlywood;
+    margin: 0;
 }
 
 .contain {
@@ -271,4 +272,18 @@ li {
     padding-top: 5px;
     font-size: 25px;
     margin: 0 auto;
+}
+
+
+/* clock */
+
+.clock {
+    background-color: black;
+    border-radius: 10px;
+    padding: 5px;
+    width: 80px;
+    color: white;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 10px;
 }

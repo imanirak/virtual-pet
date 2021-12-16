@@ -84,7 +84,11 @@ class virtualPet {
         console.log(this.sleepiness);
         let sleep = document.getElementById("sleepiness").value = this.sleepiness;
 
+
         /*turns off light */
+
+
+
 
         // document.getElementById("dark").setAttribute('background-color:', "black");
         if (sleep > 10) {
@@ -96,6 +100,7 @@ class virtualPet {
                 button: "OK",
             })
         } else {
+
             console.log("I want to sleep")
         }
 
@@ -201,7 +206,57 @@ enter.addEventListener('click', () => {
 
 });
 
+//clock
 
+class DigitalClock {
+    constructor(element) {
+
+
+        this.element = element;
+    }
+
+    start() {
+        // updates time every half sec
+        this.update();
+
+        setInterval(() => {
+            this.update();
+        }, 500);
+
+    }
+
+    update() {
+        // updates time correctly & AM/PM
+
+        const parts = this.getTimeParts();
+        const minuteFormatted = parts.minute.toString().padStart(2, "0");
+        // pad it out with 0
+        const timeFormatted = `${parts.hour}:${minuteFormatted}`;
+        const amPm = parts.isAm ? "AM" : "PM";
+
+        this.element.querySelector(".clock-time").textContent = timeFormatted;
+        this.element.querySelector(".clock-ampm").textContent = amPm;
+    }
+
+
+    getTimeParts() {
+        const now = new Date();
+
+        return {
+            hour: now.getHours() % 12 || 12,
+            minute: now.getMinutes(),
+            isAm: now.getHours() < 12
+
+        };
+    }
+}
+
+const clockElement = document.querySelector(".clock");
+const clockObject = new DigitalClock(clockElement);
+
+
+
+clockObject.start();
 
 
 //timer
@@ -215,16 +270,24 @@ document.getElementById("nameButton").addEventListener("click", function() {
 })
 
 
-
 //die if
+
+/*
 const hungerV = document.getElementById("hunger").value;
 
 const sleepV = document.getElementById("sleepiness").value;
 
 const happyV = document.getElementById("happiness").value;
 
-if (hungerV || sleepV || happyV === "0") {
+if (hungerV || sleepV || happyV == "0") {
+    let nameInput = document.getElementById("nameinput");
     this.alive = false;
-} else {
-    this.alive = true;
+    swal({
+        title: `${nameInput.value} has died!`,
+        icon: "warning",
+        text: ` Would you like to start over?`,
+        button: "Yes",
+    })
 }
+
+*/
