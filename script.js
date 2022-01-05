@@ -18,10 +18,6 @@ have the option to close out this pop up.
 
 
 
-/* time to reference growth for vpet */
-
-let time = 0;
-
 
 class virtualPet {
     constructor() {
@@ -31,7 +27,7 @@ class virtualPet {
             this.age = 0,
             this.alive = true,
             this.stage = 0,
-            this.evolutionOne = ""
+            this.evolveOne = ""
     }
 
     /* raise food progress bar by 2 */
@@ -87,10 +83,11 @@ class virtualPet {
 
         /*turns off light */
 
-
-
-
         // document.getElementById("dark").setAttribute('background-color:', "black");
+
+
+        //change img
+
         if (sleep > 10) {
             document.getElementById("sleepiness").value = "10";
             swal({
@@ -100,6 +97,7 @@ class virtualPet {
                 button: "OK",
             })
         } else {
+
 
             console.log("I want to sleep")
         }
@@ -121,11 +119,15 @@ class virtualPet {
                 icon: "info",
                 button: "OK",
             })
+
+
+
         } else {
             console.log("I still want to play!")
         }
 
     }
+
 
 
 }
@@ -206,7 +208,11 @@ enter.addEventListener('click', () => {
 
 });
 
+
+
 //clock
+
+
 
 class DigitalClock {
     constructor(element) {
@@ -259,15 +265,44 @@ const clockObject = new DigitalClock(clockElement);
 clockObject.start();
 
 
-//timer
+//evolving
 
-document.getElementById("nameButton").addEventListener("click", function() {
-    var time = 0;
 
-    const vTimer = setInterval(function function1() {
-        document.getElementById("")
-    })
-})
+
+
+
+
+
+// to change tama photo
+
+
+
+
+
+
+
+//darkness when sleep button is clicked
+
+const change = () => {
+
+    const background = document.getElementById("bg");
+    const night = background.style.backgroundImage = "url('images/night.png')";
+    //const day = background.style.backgroundImage = "url('images/day.png')";
+
+}
+
+if (!change()) {
+    setInterval(() => {
+
+        const dBackground = document.getElementById("bg");
+        const day = dBackground.style.backgroundImage = "url('images/scene.png')";
+    }, 800);
+
+
+
+}
+
+
 
 
 //die if
