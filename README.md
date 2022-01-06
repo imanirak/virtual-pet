@@ -55,6 +55,5 @@ Keep them happy or they’ll die of boredom.
 We all need sleep to  survive the day. 
 Ensure your pet is well rested or it will faint from exhaustion.
 
-# Day 1:
 
 
